@@ -36,7 +36,7 @@
         async function getWeather() {
             const response = await fetch(`https://api.oioweb.cn/api/weather/GetWeather`);
             const data = await response.json();
-            document.getElementById('location').innerText = result.city.City;
+            document.getElementById('location').innerText = result.city.Province;
             document.getElementById('temp').innerText = `${result.condition.max_degree} °C`;
             document.getElementById('description').innerText = result.condition.day_weather_short;
         }
